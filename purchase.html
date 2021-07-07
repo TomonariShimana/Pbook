@@ -1,0 +1,223 @@
+<!doctype html>
+  <html lang="ja">
+    
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; Charset=UTF-8">
+
+      <!-- Bootstrapに必要 -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <!-- Bootstrap本体 -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+      
+      <!-- font-awesome -->
+      <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+      
+      <!-- CSS群 -->
+      <link rel="stylesheet" type="text/css" href="css/reset.css">
+      <link rel="stylesheet" type="text/css" href="css/header.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" type="text/css" href="css/purchase.css">
+      
+      <!-- JS群 -->
+      <script src="js/header.js"></script>
+      
+      <title>P-BOOKs</title>
+    </head>
+    
+    
+    
+    <body>
+      <div class="wrap">
+        <header>
+            <h1>
+              <a href="index.html">PROBOOK</a>
+            </h1>
+
+            <form method="post" action="search.html">
+            <div class="input-group">
+                <div class="input-group-prepend dropdown">
+                  <button class="btn btn-outline-secondary dropdown-toggle condition-button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">条件</button>
+                  <div class="dropdown-menu p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dropdown-menu02 p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="search-input" placeholder="商品を検索">
+                  <span class="input-group-append">
+                      <button type="submit" class="btn btn-primary" id="search-btn">
+                          <i class="fas fa-search"></i>
+                      </button>
+                  </span>
+              </div>
+            </form>
+
+            <nav>
+              <ul>
+                <li>
+                    <a href="cart.html">
+                      <i class="fas fa-shopping-cart"></i>
+                      <p>カート</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mybook_list.html">
+                      <i class="fas fa-book"></i>
+                      <p>MYブック</p>
+                    </a>
+                </li>
+                <li class="js-dropdown">
+                    <a href="">
+                      <i class="fas fa-user-alt"></i>
+                      <p>アカウント</p>
+                    </a>
+                    <div class="account-item">
+                        <a href="" class="user_name"><i class="fas fa-user-alt"></i>ユーザー名</a>
+                        <a href="login.html" class="logout">ログアウト</a>
+                        <a href="account.html" class="mypage">アカウントページ</a>
+                    </div>
+                </li>
+              </ul>
+            </nav>
+        </header>
+          
+        </div><!--</wrap>-->
+
+        <div class="content">
+
+          <div class="h2-box">
+            <h2>購入</h2>
+          </div>
+
+          <div class="cart-list">
+            
+            <div class="book flex">
+              <div class="book-left">
+                <figure>
+                  <img src="images/book01.jpg">
+                </figure>
+              </div>
+              <div class="book-right">
+                <p class="book-title">
+                  pythonによるAI・機械学習・深層学習アプリの作り方
+                </p>
+
+                <div class="book-right-bottom">
+                  <div class="book-author">
+                    クジラ飛行机
+                  </div>
+                  <div class="book-price">
+                    2430円
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .book -->
+
+            <div class="book flex">
+              <div class="book-left">
+                <figure>
+                  <img src="images/book01.jpg">
+                </figure>
+              </div>
+              <div class="book-right">
+                <p class="book-title">
+                  pythonによるAI・機械学習・深層学習アプリの作り方
+                </p>
+
+                <div class="book-right-bottom">
+                  <div class="book-author">
+                    クジラ飛行机
+                  </div>
+                  <div class="book-price">
+                    2430円
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .book -->
+
+          </div>
+          <!-- .cart-list -->
+
+        </div>
+        <!-- .content -->
+
+
+        <div class="purchase-box">
+          <div class="purchase-wrap flex juco-end">
+            <div class="left">
+              <table>
+                <tr class="text-white1">
+                  <td>商品合計</td>
+                  <td>4860円</td>
+                </tr>
+                <tr class="text-white2">
+                  <td>ポイント</td>
+                  <td>5532P</td>
+                </tr>
+              </table>
+            </div>
+            <div class="right">
+              <a href="mybook_list.html" class="btn-capsule bg-white">ポイントで購入</a>
+            </div>
+          </div>
+        </div>
+        <!-- purhcase-box -->
+      
+    </body>
+    
+    
+    
+  </html>

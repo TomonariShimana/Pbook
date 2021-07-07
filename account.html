@@ -1,0 +1,337 @@
+<!doctype html>
+  <html lang="ja">
+
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; Charset=UTF-8">
+
+      <!-- Bootstrapに必要 -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <!-- Bootstrap本体 -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+      <!-- font-awesome -->
+      <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+      <!-- CSS群 -->
+      <link rel="stylesheet" type="text/css" href="css/reset.css">
+      <link rel="stylesheet" type="text/css" href="css/header.css">
+      <link rel="stylesheet" type="text/css" href="css/account.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+
+      <!-- JS群 -->
+      <script src="js/header.js"></script>
+
+      <title>P-BOOKs</title>
+    </head>
+
+
+
+    <body>
+      <div class="wrap">
+        <header>
+            <h1>
+              <a href="index.html">PROBOOK</a>
+            </h1>
+
+            <form method="post" action="search.html">
+            <div class="input-group">
+                <div class="input-group-prepend dropdown">
+                  <button class="btn btn-outline-secondary dropdown-toggle condition-button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">条件</button>
+                  <div class="dropdown-menu p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dropdown-menu02 p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="search-input" placeholder="商品を検索">
+                  <span class="input-group-append">
+                      <button type="submit" class="btn btn-primary" id="search-btn">
+                          <i class="fas fa-search"></i>
+                      </button>
+                  </span>
+              </div>
+            </form>
+
+            <nav>
+              <ul>
+                <li>
+                    <a href="cart.html">
+                      <i class="fas fa-shopping-cart"></i>
+                      <p>カート</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mybook_list.html">
+                      <i class="fas fa-book"></i>
+                      <p>MYブック</p>
+                    </a>
+                </li>
+                <li class="js-dropdown">
+                    <a href="">
+                      <i class="fas fa-user-alt"></i>
+                      <p>アカウント</p>
+                    </a>
+                    <div class="account-item">
+                        <a href="" class="user_name"><i class="fas fa-user-alt"></i>ユーザー名</a>
+                        <a href="login.html" class="logout">ログアウト</a>
+                        <a href="account.html" class="mypage">アカウントページ</a>
+                    </div>
+                </li>
+              </ul>
+            </nav>
+        </header>
+
+
+      <!-- content -->
+      <div class="content">
+        <div class="h2-box">
+          <h2>Myページ</h2>
+        </div>
+          
+
+        <div class="cp_wrap">
+          <div class="cp_actab">
+            <input id="tab-one" class="tab-input" type="checkbox" name="tabs">
+            <label for="tab-one" class="blue-label">ユーザー情報</label>
+
+            <!-- アカウントImage -->
+            <div class="cp_actab-content0">
+              <div class="sub-title0">
+              <h4>アカウント</h4>
+              <div class="">
+                <figure class="account-figure">
+                  <img src="images/book01.jpg" alt="Photo-Image">
+                </figure>
+              </div>
+
+              <!-- アカウント情報 -->
+              <form id="user_form">
+                <div class="form-group" class="label-position">
+                  <label for="exampleInputEmail1" class="form-label">Full-name</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="P-BOOKs" readonly>
+                </div>
+                <div class="form-group" class="label-position">
+                  <label for="exampleInputPassword1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="p-books@pmail.com" readonly>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="cp_actab" class="point-area">
+          <input id="tab-two" class="tab-input" type="checkbox" name="tabs">
+          <label for="tab-two" class="blue-label">保有ポイント</label>
+
+          <div class="cp_actab-content">
+            <div class="sub-title">
+              <h4>現在のポイント</h4>  
+                <p>3000P</p>
+              <div id="charge-btn1">
+                <a href="point.html">
+                  <span>チャージする</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cp_actab-content">
+            <div class="sub-title">
+              <h4>チャージ履歴</h4>
+              <div class="charge-area">
+                  <ul>
+                      <li>2020/09/09</li>
+                      <li>500P</li>
+                  </ul>
+                  <ul>
+                      <li>2020/09/10</li>
+                      <li>500P</li>
+                  </ul>
+                  <ul>
+                      <li>2020/09/11</li>
+                      <li>500P</li>
+                  </ul>
+              </div>
+              <div id="charge-btn2">
+                <a href="#">
+                  <span>履歴を表示</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- 2階層アコーディオン -->
+          <div class="many-actab">
+            <label for="menu2" class="blue-sublabel">ライブラリー</label>
+
+              <input id="menu2" class="toggle" type="checkbox"/>
+
+                <ul class="many-actab2">
+                    <label for="menu2_0" class="blue-sublabel1">書籍投稿ページ<span><a href="post_book.html">
+                      <i class="fas fa-arrow-right"></i>
+                    </a></span></label>
+                    <input type="checkbox" id="menu2_1" class="toggle" />
+
+                    <label for="menu2_1" class="blue-sublabel1">投稿書籍管理ページ</label>
+                    <input type="checkbox" id="menu2_1" class="toggle" />
+                    
+                      <div class="cp_actab-content0">
+                        <div class="sub-title0">
+                          <h4>投稿履歴の表示</h4>
+
+                          <div class="input-group">
+                            <div class="input-group-prepend dropdown">
+                              <button class="btn btn-outline-secondary dropdown-toggle condition-button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ジャンル別</button>
+                              <div class="dropdown-menu p-3">
+                                <div>ジャンル別表示</div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    全て
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                                  <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                                    HTML
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                                  <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                                    CSS
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                                  <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                                    JavaScript
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="dropdown-menu02 p-3">
+                                <div>ジャンルで検索</div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    全て
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                                  <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                                    HTML
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                                  <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                                    CSS
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                                  <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                                    JavaScript
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="image-plc">
+                            <div class="plc-date">2020/09/1</div>
+                              <ul class="plc-flex">
+                                  <li class="history-plc">
+                                    <figure>
+                                      <img src="images/python.jpg" alt="投稿履歴の画像">
+                                    </figure>
+                                    <span>プログラミング学習の書籍</span>
+                                  </li>
+                              </ul>
+
+                              <div class="plc-date">2020/09/1</div>
+                              <ul class="plc-flex">
+                                  <li class="history-plc">
+                                    <figure>
+                                      <img src="images/python.jpg" alt="投稿履歴の画像">
+                                    </figure>
+                                    <span>プログラミング学習の書籍</span>
+                                  </li>
+                              </ul>
+                              <div id="hist-btn">
+                                <a href="#">
+                                  <span>さらに表示</span>
+                                </a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                </ul>
+          </div>
+          <ul class="many-actab3">
+            <label for="menu2_0" class="blue-sublabel1">新規ジャンル追加<span><a href="admin_new_genre.html">
+              <i class="fas fa-arrow-right"></i>
+            </a></span></label>
+            <input type="checkbox" id="menu2_1" class="toggle" />
+
+            <label for="menu2_1" class="blue-sublabel1">投稿依頼一覧ページへ<span><a href="admin_book_request_check.html">
+              <i class="fas fa-arrow-right"></i>
+            </a></span></label>
+            <input type="checkbox" id="menu2_1" class="toggle" />
+          </ul>
+          
+      </div><!--</wrap>-->
+    </body>
+  </html>

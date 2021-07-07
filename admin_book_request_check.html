@@ -1,0 +1,242 @@
+<!doctype html>
+  <html lang="ja">
+    
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; Charset=UTF-8">
+
+      <!-- Bootstrapに必要 -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <!-- Bootstrap本体 -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+      
+      <!-- font-awesome -->
+      <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+      
+      <!-- CSS群 -->
+      <link rel="stylesheet" type="text/css" href="css/reset.css">
+      <link rel="stylesheet" type="text/css" href="css/header.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" type="text/css" href="css/add_request.css">
+      
+      <!-- JS群 -->
+      <script src="js/header.js"></script>
+      <script src="js/add_request.js"></script>
+      <title>P-BOOKs</title>
+    </head>
+    
+    
+    
+    <body>
+      <div class="wrap">
+        <header>
+            <h1>
+              <a href="index.html">PROBOOK</a>
+            </h1>
+
+            <form method="post" action="search.html">
+            <div class="input-group">
+                <div class="input-group-prepend dropdown">
+                  <button class="btn btn-outline-secondary dropdown-toggle condition-button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">条件</button>
+                  <div class="dropdown-menu p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dropdown-menu02 p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="search-input" placeholder="商品を検索">
+                  <span class="input-group-append">
+                      <button type="submit" class="btn btn-primary" id="search-btn">
+                          <i class="fas fa-search"></i>
+                      </button>
+                  </span>
+              </div>
+            </form>
+
+            <nav>
+              <ul>
+                <li>
+                    <a href="cart.html">
+                      <i class="fas fa-shopping-cart"></i>
+                      <p>カート</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mybook_list.html">
+                      <i class="fas fa-book"></i>
+                      <p>MYブック</p>
+                    </a>
+                </li>
+                <li class="js-dropdown">
+                    <a href="">
+                      <i class="fas fa-user-alt"></i>
+                      <p>アカウント</p>
+                    </a>
+                    <div class="account-item">
+                        <a href="" class="user_name"><i class="fas fa-user-alt"></i>ユーザー名</a>
+                        <a href="login.html" class="logout">ログアウト</a>
+                        <a href="account.html" class="mypage">アカウントページ</a>
+                    </div>
+                </li>
+              </ul>
+            </nav>
+        </header>
+          
+      </div><!--</wrap>-->
+
+
+
+
+        <div class="content">
+
+
+
+          <div class="h2-box">
+            <h2>投稿依頼一覧</h2>
+          </div>
+
+
+
+          <ul class="nav nav-pills b-tab">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">新規依頼</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">編集依頼</a>
+            </li> -->
+          </ul>
+          
+         <div class="sort-area">
+          <div class="select-group">
+            <select class="custom-select">
+              <option selected>日付</option>
+              <option value="1">昇順</option>
+              <option value="2">降順</option>
+            </select>
+
+            <select class="custom-select">
+              <option selected>ステータス</option>
+              <option value="1">チェック済み</option>
+              <option value="2">要チェック</option>
+            </select>
+
+            <!-- <select class="custom-select">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select> -->
+
+          </div>
+             <!-- <div class="drop-group">
+                 <button type="button" class="btn btn-secondary b-radius b-flex b-button1"><span>更新順</span><span>新/旧</span></button>
+                 <button type="button" class="btn btn-secondary b-radius b-flex b-button2"><span>タイトル順</span><span>昇/降</span></button>
+                <div class="dropdown b-dropdown">
+                  <a class="btn btn-secondary dropdown-toggle b-radius b-button3" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ジャンル別
+                  </a>
+
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </div> -->
+
+
+
+                <table>
+                    <tr>
+                        <th>タイトル</th>
+                        <th>ステータス</th>
+                        <th>日付</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://localhost:1026/PH27/book/check.php">
+                                <i class="fas fa-folder-open"></i>pythonによるAI・機械学習・深層学習アプリの作り方
+                            </a>
+                        </td>
+                        <td>
+                            <button type="button" class="status-check">要チェック</button>
+                        </td>
+                        <td>2020/10/20</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://localhost:1026/PH27/book/check.php">
+                                <i class="fas fa-folder-open"></i>pythonによるAI・機械学習・深層学習アプリの作り方
+                            </a>
+                        </td>
+                        <td>
+                            <button type="button" class="status-check status-checked">チェック済み</button>
+                        </td>
+                        <td>2020/10/20</td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+
+
+
+
+        </div><!-- content -->
+      
+    </body>
+    
+    
+    
+  </html>

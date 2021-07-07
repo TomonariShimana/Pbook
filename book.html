@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+  <html lang="ja">
+
+    <head>
+
+      <meta http-equiv="Content-Type" content="text/html; Charset=UTF-8">
+
+      <!-- Bootstrapに必要 -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <!-- Bootstrap本体 -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+
+      <!-- font-awesome -->
+      <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+      <!-- CSS群 -->
+      <link rel="stylesheet" type="text/css" href="css/reset.css">
+      <link rel="stylesheet" type="text/css" href="css/header.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" type="text/css" href="css/book.css">
+
+      <!-- JS群 -->
+
+      <title>P-BOOKs</title>
+
+    </head>
+
+
+
+    <body>
+
+      <div class="wrap">
+
+        <header>
+            <h1>
+              <a href="index.html">PROBOOK</a>
+            </h1>
+
+            <form method="post" action="search.html">
+            <div class="input-group">
+                <div class="input-group-prepend dropdown">
+                  <button class="btn btn-outline-secondary dropdown-toggle condition-button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">条件</button>
+                  <div class="dropdown-menu p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dropdown-menu02 p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="search-input" placeholder="商品を検索">
+                  <span class="input-group-append">
+                      <button type="submit" class="btn btn-primary" id="search-btn">
+                          <i class="fas fa-search"></i>
+                      </button>
+                  </span>
+              </div>
+            </form>
+
+            <nav>
+              <ul>
+                <li>
+                    <a href="cart.html">
+                      <i class="fas fa-shopping-cart"></i>
+                      <p>カート</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mybook_list.html">
+                      <i class="fas fa-book"></i>
+                      <p>MYブック</p>
+                    </a>
+                </li>
+                <li class="js-dropdown">
+                    <a href="">
+                      <i class="fas fa-user-alt"></i>
+                      <p>アカウント</p>
+                    </a>
+                    <div class="account-item">
+                        <a href="" class="user_name"><i class="fas fa-user-alt"></i>ユーザー名</a>
+                        <a href="login.html" class="logout">ログアウト</a>
+                        <a href="account.html" class="mypage">アカウントページ</a>
+                    </div>
+                </li>
+              </ul>
+            </nav>
+        </header>
+
+      </div>
+
+
+
+        <div class="content">
+
+
+
+          <div class="main flexbox">
+
+            <div class="flex-item">
+              <figure>
+                <img src="images/book01.jpg">
+                <span><i class="fas fa-star"></i></span>
+              </figure>
+            </div>
+
+
+            <div>
+
+              <p class="book type">電子書籍</p>
+
+              <p class="book title">プログラミング入門講座基本と思考法と重要事項がきちんと学べる授業</p>
+
+              <p class="book evaluation">
+                <span class="good"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span><!--
+             --><span class="bad"><i class="far fa-star"></i></span>
+              </p>
+
+              <a href="#review" class="book link">レビュー1件</a>
+              <a href="review.html" class="book link">レビューを書く</a>
+
+              <div class="intro">
+                <div class="overflow-dummy">
+                  <p>なぜ、世界中の成功者はプログラミングの基本を学んでいるのか。その答えと、具体的な学び方が一冊に！世界中で2億人以上が夢中になった学び方！</p>
+                  <p>バラク・オバマ（アメリカ大統領）、ビル・ゲイツ（Microsoft 創業者）、マーク・ザッカーバーグ（Facebook 創業者）らも賛同した、「世界最良の学習メソッド」を徹底紹介！
+                    抜群の面白さとわかりやすさで、小学生から大人まで全世代がハマる！</p>
+                </div>
+              </div>
+
+              <div class="book-cart">
+                <label>&yen;2,000</label>
+                <a class="btn cart-in" href="cart.html" role="button"><i class="fas fa-shopping-cart"></i> カートに入れる</a>
+              </div>
+
+            </div>
+
+          </div><!-- flexbox -->
+
+
+
+          <section class="information">
+
+            <h2 class="mb24">基本情報</h2>
+
+            <p>
+              <span class="info-left1">ページ数</span>:<span class="info-right">10ページ</span>
+            </p>
+            <p>
+              <span class="info-left2">作者</span>:<span class="info-right">米田晶悟</span>
+            </p>
+            <p>
+              <span class="info-left2">内容</span>:<span class="info-right">プログラミング入門編</span>
+            </p>
+
+          </section><!-- detail -->
+
+
+
+          <section class="detail">
+
+            <h2 class="mb24">商品説明</h2>
+
+            <p>
+              昨今巷では「プログラミング教育」や「プログラミングスキルの必要性」が話題になっています。はたして「プログラミング教育」はどこまで本格化するのか？「プログラミング」はビジネスの必須スキルになっていくのか？
+            </p>
+            <p>
+              本書は日本、あるいは世界におけるプログラミング教育やプログラミングスキルの必要性について最新動向を紹介しつつ、実際にプログラミングの学び方も習得していきます。
+            </p>
+            <p>
+              これまでエンジニアだけの習得スキルであったプログラミングから、一般的なビジネススキルへ。そんな時代の道しるべとして、さまざまな人に読んでいただきたい1冊です。
+            </p>
+
+          </section>
+
+
+
+          <section class="review" id="review">
+
+            <h2 class="mb48">レビュー一覧</h2>
+
+            <table border="3">
+
+              <tr>
+                <th>5段階評価</th>
+                <td>
+                  <span class="good"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span><!--
+               --><span class="bad"><i class="far fa-star"></i><i class="far fa-star"></i></span>
+                </td>
+              </tr>
+
+              <tr>
+                <th>学習年数</th>
+                <td>5年以内</td>
+              </tr>
+
+              <tr>
+                <th>本書の内容レベル</th>
+                <td>初心者～中級者向け</td>
+              </tr>
+
+              <tr>
+                <th colspan="2">コメント本文</th>
+              </tr>
+
+              <tr>
+                <td colspan="2" class="comment">この手の本が沢山あり、どれを買うか大変迷いますが、こちらは初心者に分かりやすく興味を持たせてくれる内容で、個人的に購入して本当に良かったです。実践と併せて今後も繰り返し読み参考に致します。</td>
+              </tr>
+
+            </table>
+
+
+            <table border="3">
+
+              <tr>
+                <th>5段階評価</th>
+                <td>
+                  <span class="good"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span><!--
+               --><span class="bad"><i class="far fa-star"></i></span>
+                </td>
+              </tr>
+
+              <tr>
+                <th>学習年数</th>
+                <td>1年以内</td>
+              </tr>
+
+              <tr>
+                <th>本書の内容レベル</th>
+                <td>初心者～中級者向け</td>
+              </tr>
+
+              <tr>
+                <th colspan="2">コメント本文</th>
+              </tr>
+
+              <tr>
+                <td colspan="2" class="comment">本の通りにパソコンと向き合って進めています。プログラミングの基礎がきちんと学べます。</td>
+              </tr>
+
+            </table>
+
+
+            <!-- <button class="btn review-more">他のレビューを表示</button> -->
+
+          </section>
+
+
+
+        </div><!-- .content -->
+
+
+
+    </body>
+
+</html>

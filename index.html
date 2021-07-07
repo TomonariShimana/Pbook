@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <!-- Bootstrapに必要 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <!-- Bootstrap本体 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+
+    <title>レスポンシブ・ドロワ・スライドの練習</title>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <!-- slick -->
+    <link href="slick/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="slick/slick.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="slick/slick.js"></script>
+
+    <!-- js設定ファイル -->
+    <script src="js/header.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+  </head>
+
+  <body>
+
+      <div class="wrap">
+        <header>
+            <h1>
+              <a href="index.html">PROBOOK</a>
+            </h1>
+
+            <form method="post" action="search.html">
+            <div class="input-group">
+                <div class="input-group-prepend dropdown">
+                  <button class="btn btn-outline-secondary dropdown-toggle condition-button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">条件</button>
+                  <div class="dropdown-menu p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dropdown-menu02 p-3">
+                    <div>ジャンルで検索</div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        全て
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="option1">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios1">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="option2">
+                      <label class="form-check-label badge badge-primary text-white" for="exampleRadios2">
+                        CSS
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="option3">
+                      <label class="form-check-label badge badge-warning text-white" for="exampleRadios3">
+                        JavaScript
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="search-input" placeholder="商品を検索">
+                  <span class="input-group-append">
+                      <button type="submit" class="btn btn-primary" id="search-btn">
+                          <i class="fas fa-search"></i>
+                      </button>
+                  </span>
+              </div>
+            </form>
+
+            <nav>
+              <ul>
+                <li>
+                    <a href="cart.html">
+                      <i class="fas fa-shopping-cart"></i>
+                      <p>カート</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mybook_list.html">
+                      <i class="fas fa-book"></i>
+                      <p>MYブック</p>
+                    </a>
+                </li>
+                <li class="js-dropdown">
+                    <a href="">
+                      <i class="fas fa-user-alt"></i>
+                      <p>アカウント</p>
+                    </a>
+                    <div class="account-item">
+                        <a href="" class="user_name"><i class="fas fa-user-alt"></i>ユーザー名</a>
+                        <a href="login.html" class="logout">ログアウト</a>
+                        <a href="account.html" class="mypage">アカウントページ</a>
+                    </div>
+                </li>
+              </ul>
+            </nav>
+        </header>
+        
+      </div><!--</wrap>-->
+
+      <div class="content">
+        <div id="slide">
+          <ul class="slider">
+            <li><a href="#"><img src="images/slide1.jpg" alt="image01"></a></li>
+            <li><a href="#"><img src="images/slide2.jpg" alt="image02"></a></li>
+            <li><a href="#"><img src="images/slide3.jpg" alt="image03"></a></li>
+          </ul>
+        </div>
+
+
+        <div class="h2-box flex">
+          <h2>ランキング</h2>
+          <div class="h2-box-right">
+            <a href="search.html">ランキングページへ</a> >
+          </div>
+        </div>
+
+        <div class="shohin rank">
+          <div class="flex alit-center">
+
+            <div class="arrow">
+              <div class="arrow5">
+                <a href="#"></a>
+              </div>
+            </div>
+
+            <div class="item01 item">
+              <p class="crown"><i class="fas fa-crown">1</i></p><br>
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+              <p class="red price">2430円</p>
+              <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="item">
+              <p class="crown"><i class="fas fa-crown">3</i></p><br>
+              <figure>
+                <img src="images/C_sharp.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">プログラミングC# 第7版</a><br>
+                <p class="red price">5280円</p>
+                <p class="grey">Ian Griffiths, 鈴木 幸敏</p>
+            </div>
+
+            <div class="item">
+              <p class="crown"><i class="fas fa-crown">3</i></p><br>
+              <figure>
+                <img src="images/HTML&CSS.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">1冊ですべて身につくHTML & CSSとWebデザイン入門講座<br></a>
+                <p class="red price">2486円</p>
+                <p class="grey">MAMA</p>
+            </div>
+
+            <div class="item04 item">
+              <p class="crown"><i class="fas fa-crown">4</i></p><br>
+              <figure>
+                <img src="images/JAVA.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">スッキリわかるJava入門 第3版 (スッキリシリーズ) 単行本</a><br>
+                <p class="red price">2860円</p>
+                <p class="grey">中山清喬</p>
+            </div>
+
+            <div class="arrow">
+              <div class="arrow4">
+                <a href="#"></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="h2-box flex">
+          <h2>ジャンル - Ruby</h2>
+          <div class="h2-box-right">
+            <a href="search.html">ジャンル - Rubyページへ</a> >
+          </div>
+        </div>
+
+        <div class="shohin">
+          <div class="flex alit-center">
+
+            <div class="arrow">
+              <div class="arrow5">
+                <a href="#"></a>
+              </div>
+            </div>
+
+            <div class="item01 item">
+              <!-- <p class="crown"><i class="fas fa-crown">1</i></p><br> -->
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+              <p class="red price">2430円</p>
+              <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="item">
+              <!-- <p class="crown"><i class="fas fa-crown">2</i></p><br> -->
+              <figure>
+                <img src="images/Ruby2.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">プログラミング言語 Ruby</a><br>
+                <p class="red price">3799円</p>
+                <p class="grey">まつもと ゆきひろ</p>
+            </div>
+
+            <div class="item">
+              <!-- <p class="crown"><i class="fas fa-crown">3</i></p><br> -->
+              <figure>
+                <img src="images/Ruby3.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">スラスラ読める Rubyふりがなプログラミング (ふりがなプログラミングシリーズ)</a><br>
+                <p class="red price">2200円</p>
+                <p class="grey">リブロワークス</p>
+            </div>
+
+            <div class="item04 item">
+              <!-- <p class="crown"><i class="fas fa-crown">4</i></p><br> -->
+              <figure>
+                <img src="images/Ruby4.jpeg" class="python">
+              </figure>
+              <a href="book.html" id="atag">改訂2版 パーフェクトRuby</a><br>
+                <p class="red price">3586円</p>
+                <p class="grey">Rubyサポーターズ</p>
+            </div>
+
+            <div class="arrow">
+              <div class="arrow4">
+                <a href="#"></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="h2-box flex">
+          <h2>最近チェックした書籍</h2>
+          <div class="h2-box-right">
+            <!-- <a href="search.html">ジャンル - Rubyページへ</a> > -->
+          </div>
+        </div>
+
+        <div class="shohin">
+          <div class="flex alit-center">
+
+            <div class="arrow">
+              <div class="arrow5">
+                <a href="#"></a>
+              </div>
+            </div>
+
+            <div class="item01 item">
+              <!-- <p class="crown"><i class="fas fa-crown">1</i></p><br> -->
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+              <p class="red price">2430円</p>
+              <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="item">
+              <!-- <p class="crown"><i class="fas fa-crown">2</i></p><br> -->
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+                <p class="red price">2430円</p>
+                <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="item">
+              <!-- <p class="crown"><i class="fas fa-crown">3</i></p><br> -->
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+                <p class="red price">2430円</p>
+                <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="item04 item">
+              <!-- <p class="crown"><i class="fas fa-crown">4</i></p><br> -->
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+                <p class="red price">2430円</p>
+                <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="arrow">
+              <div class="arrow4">
+                <a href="#"></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="h2-box flex">
+          <h2>今すぐ読める！無料の書籍</h2>
+          <div class="h2-box-right">
+            <a href="search.html">無料書籍ページへ</a> >
+          </div>
+        </div>
+
+        <div class="shohin">
+          <div class="flex alit-center">
+
+            <div class="arrow">
+              <div class="arrow5">
+                <a href="#"></a>
+              </div>
+            </div>
+
+            <div class="item01 item">
+              <!-- <p class="crown"><i class="fas fa-crown">1</i></p><br> -->
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+              <p class="red price">2430円</p>
+              <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="item">
+              <!-- <p class="crown"><i class="fas fa-crown">2</i></p><br> -->
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+                <p class="red price">2430円</p>
+                <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="item">
+              <!-- <p class="crown"><i class="fas fa-crown">3</i></p><br> -->
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+                <p class="red price">2430円</p>
+                <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="item04 item">
+              <!-- <p class="crown"><i class="fas fa-crown">4</i></p><br> -->
+              <figure>
+                <img src="images/python.jpg" class="python">
+              </figure>
+              <a href="book.html" id="atag">pythonによるAI・機械<br>
+                学習・深層学習アプリ</a><br>
+                <p class="red price">2430円</p>
+                <p class="grey">クジラ飛行机</p>
+            </div>
+
+            <div class="arrow">
+              <div class="arrow4">
+                <a href="#"></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        
+
+      </div>
+
+  </body>
+
+</html>
